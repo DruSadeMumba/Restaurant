@@ -2,4 +2,6 @@
     <string name="app_name">My Restaurants</string>
     <string name="button_name">Find Restaurants</string>
     <string name="africanqueen">africanqueen</string>
+    <string name="zip">Enter Zipcode Here</string>
+    <string name="restaurants_near_you">Here are all the restaurants near:</string>
 </resources>

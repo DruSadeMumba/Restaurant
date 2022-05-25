@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000">
+    android:background="@color/colorPrimaryText">
 
     <ImageView
-        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:contentDescription="@string/africanqueen"
@@ -13,15 +14,32 @@
         android:src="@drawable/restaurant" />
 
     <TextView
+        android:id="@+id/appNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:layout_marginTop="35dp"
-        android:textColor="@color/colorTextIcons"
-        android:textSize="50sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textStyle="bold" />
+        android:layout_marginTop="35dp"
+        android:text="@string/app_name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/nunito_sans_semibold" />
+
+    <EditText
+        android:id="@+id/locationEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTextIcons"
+        android:layout_above="@+id/findRestaurantsButton"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:ems="10"
+        android:hint="@string/zip"
+        android:layout_centerHorizontal="true"
+        tools:ignore="LabelFor,TextFields"
+        android:autofillHints=""
+        android:inputType="" />
 
     <Button
         android:id="@+id/findRestaurantsButton"
@@ -31,6 +49,6 @@
         android:layout_centerHorizontal="true"
         android:background="@color/colorAccent"
         android:text="@string/button_name"
-        android:textColor="@color/colorTextIcons" />
+        android:textColor="#000000" />
 
 </RelativeLayout>
