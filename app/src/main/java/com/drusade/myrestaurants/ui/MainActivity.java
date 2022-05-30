@@ -1,4 +1,4 @@
-package com.drusade.myrestaurants;
+package com.drusade.myrestaurants.ui;
 
 import androidx.appcompat.app.*;
 
@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.*;
 import android.view.View;
 import android.widget.*;
+
+import com.drusade.myrestaurants.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

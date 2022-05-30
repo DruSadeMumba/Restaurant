@@ -2,6 +2,10 @@ package com.drusade.myrestaurants;
 
 import android.content.Intent;
 import android.widget.TextView;
+
+import com.drusade.myrestaurants.ui.MainActivity;
+import com.drusade.myrestaurants.ui.RestaurantsActivity;
+
 import junit.framework.TestCase;
 
 import org.junit.Before;

@@ -1,4 +1,4 @@
-package com.drusade.myrestaurants;
+package com.drusade.myrestaurants.adapters;
 
 import android.content.Context;
 import android.widget.ArrayAdapter;

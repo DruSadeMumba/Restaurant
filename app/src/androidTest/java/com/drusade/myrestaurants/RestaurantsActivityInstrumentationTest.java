@@ -6,13 +6,14 @@ import static androidx.test.espresso.assertion.ViewAssertions.*;
 import static androidx.test.espresso.matcher.RootMatchers.*;
 import static androidx.test.espresso.matcher.ViewMatchers.*;
 import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.*;
 
 import android.view.*;
 
 import androidx.test.core.app.*;
 import androidx.test.ext.junit.rules.*;
 import androidx.test.ext.junit.runners.*;
+
+import com.drusade.myrestaurants.ui.RestaurantsActivity;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -42,7 +43,7 @@ public class RestaurantsActivityInstrumentationTest {
     public void listItemClickDisplaysToastWithCorrectRestaurant() {
         String restaurantName = "Haru";
         onData(anything())
-                .inAdapterView(withId(R.id.listView))
+                .inAdapterView(withId(R.id.recyclerView))
                 .atPosition(5)
                 .perform(click());
         onView(withText(restaurantName)).inRoot(withDecorView(not(activityDecorView)))
