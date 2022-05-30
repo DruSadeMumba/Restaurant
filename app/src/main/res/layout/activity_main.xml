@@ -9,9 +9,9 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:contentDescription="@string/africanqueen"
+        android:contentDescription="@string/main"
         android:scaleType="centerCrop"
-        android:src="@drawable/restaurant" />
+        android:src="@drawable/restaurants" />
 
     <TextView
         android:id="@+id/appNameTextView"
@@ -21,7 +21,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
         android:text="@string/app_name"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/white"
         android:textSize="50sp"
         android:textStyle="bold"
         app:fontFamily="@font/nunito_sans_semibold" />

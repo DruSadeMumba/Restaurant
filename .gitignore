@@ -1,5 +1,6 @@
 *.iml
 .gradle
+/gradle.properties
 /local.properties
 /.idea/caches
 /.idea/libraries
@@ -40,7 +41,7 @@ local.properties
 
 # OS generated files #
 ############
-.DS_Store
+
 .DS_Store?
 ._*
 .Spotlight-V100
@@ -54,7 +55,6 @@ build/
 .gradle/
 out/
 out
-.gradle
 gradle
 gradlew.bat
 gradlew
