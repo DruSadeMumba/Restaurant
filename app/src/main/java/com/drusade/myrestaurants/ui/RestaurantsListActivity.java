@@ -11,11 +11,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.*;
 
-import com.drusade.myrestaurants.adapters.MyRestaurantsArrayAdapter;
 import com.drusade.myrestaurants.R;
 import com.drusade.myrestaurants.adapters.RestaurantListAdapter;
 import com.drusade.myrestaurants.models.Business;
-import com.drusade.myrestaurants.models.Category;
 import com.drusade.myrestaurants.network.YelpAPI;
 import com.drusade.myrestaurants.models.YelpBusinessesSearchResponse;
 import com.drusade.myrestaurants.network.YelpClient;
@@ -28,9 +26,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class RestaurantsActivity extends AppCompatActivity {
+public class RestaurantsListActivity extends AppCompatActivity {
 
-    private static final String TAG = RestaurantsActivity.class.getSimpleName();
+    private static final String TAG = RestaurantsListActivity.class.getSimpleName();
     private RestaurantListAdapter mAdapter;
     public List<Business> restaurants;
 
@@ -46,7 +44,7 @@ public class RestaurantsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_restaurants);
+        setContentView(R.layout.activity_restaurants_list);
         ButterKnife.bind(this);
 
         Intent intent = getIntent();
@@ -63,9 +61,9 @@ public class RestaurantsActivity extends AppCompatActivity {
 
                 if (response.isSuccessful()) {
                     restaurants = response.body().getBusinesses();
-                    mAdapter = new RestaurantListAdapter(RestaurantsActivity.this, restaurants);
+                    mAdapter = new RestaurantListAdapter(RestaurantsListActivity.this, restaurants);
                     mRecyclerView.setAdapter(mAdapter);
-                    RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(RestaurantsActivity.this);
+                    RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(RestaurantsListActivity.this);
                     mRecyclerView.setLayoutManager(layoutManager);
                     mRecyclerView.setHasFixedSize(true);
 

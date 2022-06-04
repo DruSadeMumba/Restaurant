@@ -5,7 +5,9 @@ package com.drusade.myrestaurants.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
 
+@Parcel
 public class Coordinates {
 
     @SerializedName("latitude")
@@ -33,20 +35,19 @@ public class Coordinates {
         this.longitude = longitude;
     }
 
+    //Getters
     public Double getLatitude() {
         return latitude;
     }
-
-    public void setLatitude(Double latitude) {
-        this.latitude = latitude;
-    }
-
     public Double getLongitude() {
         return longitude;
     }
 
+    //Setters
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
     public void setLongitude(Double longitude) {
         this.longitude = longitude;
     }
-
 }

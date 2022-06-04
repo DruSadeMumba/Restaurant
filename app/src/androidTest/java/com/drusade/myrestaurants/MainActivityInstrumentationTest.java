@@ -26,13 +26,13 @@ public class MainActivityInstrumentationTest {
 
     @Test
     public void validateEditText() {
-        onView(withId(R.id.locationEditText)).perform(typeText("Nairobi"))
-                .check(matches(withText("Nairobi")));
+        onView(withId(R.id.locationEditText)).perform(typeText("New York"))
+                .check(matches(withText("New York")));
     }
 
     @Test
     public void locationIsSentToRestaurantsActivity() {
-        String location = "Nairobi";
+        String location = "New York";
         onView(withId(R.id.locationEditText)).perform(typeText(location), closeSoftKeyboard());
         onView(withId(R.id.findRestaurantsButton)).perform(click());
         onView(withId(R.id.locationTextView)).check(matches

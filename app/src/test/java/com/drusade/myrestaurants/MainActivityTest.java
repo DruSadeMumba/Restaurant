@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.widget.TextView;
 
 import com.drusade.myrestaurants.ui.MainActivity;
-import com.drusade.myrestaurants.ui.RestaurantsActivity;
+import com.drusade.myrestaurants.ui.RestaurantsListActivity;
 
 import junit.framework.TestCase;
 
@@ -39,7 +39,7 @@ public class MainActivityTest extends TestCase {
     @Test
     public void secondActivityStarted(){
         activity.findViewById(R.id.findRestaurantsButton).performClick();
-        Intent expectedIntent = new Intent(activity, RestaurantsActivity.class);
+        Intent expectedIntent = new Intent(activity, RestaurantsListActivity.class);
         ShadowActivity shadowActivity = org.robolectric.Shadows.shadowOf(activity);
         Intent actualIntent = shadowActivity.getNextStartedActivity();
         assertTrue(actualIntent.filterEquals(expectedIntent));

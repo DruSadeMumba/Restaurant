@@ -13,7 +13,7 @@ import androidx.test.core.app.*;
 import androidx.test.ext.junit.rules.*;
 import androidx.test.ext.junit.runners.*;
 
-import com.drusade.myrestaurants.ui.RestaurantsActivity;
+import com.drusade.myrestaurants.ui.RestaurantsListActivity;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -26,14 +26,14 @@ public class RestaurantsActivityInstrumentationTest {
     private View activityDecorView;
 
     @Rule
-    public ActivityScenarioRule<RestaurantsActivity> activityTestRule =
-            new ActivityScenarioRule<>(RestaurantsActivity.class);
+    public ActivityScenarioRule<RestaurantsListActivity> activityTestRule =
+            new ActivityScenarioRule<>(RestaurantsListActivity.class);
 
     @Before
     public void setUp() {
-        activityTestRule.getScenario().onActivity(new ActivityScenario.ActivityAction<RestaurantsActivity>() {
+        activityTestRule.getScenario().onActivity(new ActivityScenario.ActivityAction<RestaurantsListActivity>() {
             @Override
-            public void perform(RestaurantsActivity activity) {
+            public void perform(RestaurantsListActivity activity) {
                 activityDecorView = activity.getWindow().getDecorView();
             }
         });
