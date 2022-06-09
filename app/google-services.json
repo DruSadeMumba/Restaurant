@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "901920105896",
+    "project_id": "myrestaurants-23d76",
+    "storage_bucket": "myrestaurants-23d76.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901920105896:android:06da7b8678c3878f85699d",
+        "android_client_info": {
+          "package_name": "com.drusade.myrestaurants"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "901920105896-kajui0b1dofu3nidig0j8k3g9h8pcf4h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.drusade.myrestaurants",
+            "certificate_hash": "8e83805bb72650decf134df5c50b1d4b099b7bc4"
+          }
+        },
+        {
+          "client_id": "901920105896-s46063je1p88qnvopg6giegnvq10f67f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxwGqsu4nCxwKcaZYN6DUOcvVIzMbD-SM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "901920105896-s46063je1p88qnvopg6giegnvq10f67f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

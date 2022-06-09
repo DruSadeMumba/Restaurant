@@ -14,4 +14,6 @@
     <string name="rating">4.5/5</string>
     <string name="restaurant_name">Restaurant Name</string>
     <string name="save_restaurant">Save Restaurant</string>
+    <string name="failure_message">Something went wrong. Please check your Internet connection and try again later</string>
+    <string name="unsuccessful_message">Oops!! That location doesn\'t exist in our server. Sorry.</string>
 </resources>
