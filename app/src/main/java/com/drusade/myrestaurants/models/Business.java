@@ -56,6 +56,7 @@ public class Business {
     @SerializedName("transactions")
     @Expose
     private List<String> transactions = null;
+    private String pushId;
 
     /**
      * No args constructor for use in serialization
@@ -145,6 +146,7 @@ public class Business {
     public List<String> getTransactions() {
         return transactions;
     }
+    public String getPushId() {return pushId;}
 
     //Setters
     public void setRating(Double rating) {
@@ -190,4 +192,5 @@ public class Business {
     public void setTransactions(List<String> transactions) {
         this.transactions = transactions;
     }
+    public void setPushId(String pushId) {this.pushId = pushId;}
 }

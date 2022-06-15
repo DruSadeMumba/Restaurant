@@ -49,9 +49,7 @@ public class YelpBusinessesSearchResponse {
         this.total = total;
     }
 
-    public List<Business> getBusinesses() {
-        return businesses;
-    }
+    public List<Business> getBusinesses() {return businesses;}
 
     public void setBusinesses(List<Business> businesses) {
         this.businesses = businesses;

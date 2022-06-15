@@ -12,6 +12,8 @@ import com.drusade.myrestaurants.Constants;
 import com.drusade.myrestaurants.R;
 import com.drusade.myrestaurants.models.Business;
 import com.drusade.myrestaurants.ui.RestaurantDetailActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,6 +29,7 @@ public class FirebaseRestaurantViewHolder extends RecyclerView.ViewHolder implem
 
     View mView;
     Context mContext;
+    public ImageView mRestaurantImageView;
 
     public FirebaseRestaurantViewHolder(View itemView) {
         super(itemView);
@@ -35,23 +38,24 @@ public class FirebaseRestaurantViewHolder extends RecyclerView.ViewHolder implem
         itemView.setOnClickListener(this);
     }
 
-    public void bindRestaurant(Business restaurant) {
-        ImageView restaurantImageView = (ImageView) mView.findViewById(R.id.restaurantImageView);
+    public void bindRestaurant(Business restaurante) {
+        mRestaurantImageView = (ImageView) mView.findViewById(R.id.restaurantImageView);
         TextView nameTextView = (TextView) mView.findViewById(R.id.restaurantNameTextView);
         TextView categoryTextView = (TextView) mView.findViewById(R.id.categoryTextView);
         TextView ratingTextView = (TextView) mView.findViewById(R.id.ratingTextView);
 
-        Picasso.get().load(restaurant.getImageUrl()).into(restaurantImageView);
-
-        nameTextView.setText(restaurant.getName());
-        categoryTextView.setText(restaurant.getCategories().get(0).getTitle());
-        ratingTextView.setText("Rating: " + restaurant.getRating() + "/5");
+        Picasso.get().load(restaurante.getImageUrl()).into(mRestaurantImageView);
+        nameTextView.setText(restaurante.getName());
+        categoryTextView.setText(restaurante.getCategories().get(0).getTitle());
+        ratingTextView.setText("Rating: " + restaurante.getRating() + "/5");
     }
 
     @Override
     public void onClick(View view) {
         final ArrayList<Business> restaurants = new ArrayList<>();
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_RESTAURANTS);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String uid = user.getUid();
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_RESTAURANTS).child(uid);
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
 
             @Override

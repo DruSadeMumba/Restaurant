@@ -85,8 +85,6 @@ public class RestaurantsListActivity extends AppCompatActivity {
                 fetchRestaurants(location);
                 return false;
             }
-
-
             @Override
             public boolean onQueryTextChange(String location) {
                 return false;
@@ -152,7 +150,6 @@ public class RestaurantsListActivity extends AppCompatActivity {
                 hideProgressBar();
                 showFailureMessage();
             }
-
         });
     }
 }

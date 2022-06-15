@@ -16,4 +16,15 @@
     <string name="save_restaurant">Save Restaurant</string>
     <string name="failure_message">Something went wrong. Please check your Internet connection and try again later</string>
     <string name="unsuccessful_message">Oops!! That location doesn\'t exist in our server. Sorry.</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="s_u_p">Sign Up process in Progress</string>
+    <string name="logging">Logging you in...</string>
 </resources>
